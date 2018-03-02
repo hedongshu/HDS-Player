@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 100px
+}
+body {
+    width: 4.35rem;
+    color: #6A6B6F;
+    margin: 0 auto;
+    font-size: 0.16rem;
+}
+.header {
+    margin: 0.3rem auto;
+    text-align: center;
+}
+#id-player {
+    margin: 0.14rem auto;
+    position: relative;
+}
+#id-show {
+    box-shadow: 3px 6px 12px 0px #888888;
+}
+#id-player-img img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+#id-player-img {
+    width: 1.4rem;
+}
+#id-player-img .iconSpan {
+    text-align: center;
+    width: 0.6rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    position: absolute;
+    font-size: 0.7rem;
+    background-color: #1a95a9;
+    border-radius: 50%;
+    top: 0.25rem;
+    left: -0.3rem;
+}
+#id-player-img i {
+    display: block;
+    font-size: 0.5rem;
+    line-height: 0.6rem;
+    color: rgb(255, 255, 255);
+}
+#id-player-img .icon-pause2 {
+    color: rgb(255, 255, 255);
+}
+#id-show p.song-name {
+    position: absolute;
+    top: 0.1rem;
+    left: 1.4rem;
+}
+#id-show p.artists {
+    position: absolute;
+    top: 0.32rem;
+    left: 1.4rem;
+}
+.progress-range {
+    position: absolute;
+    top: 0.7rem;
+    left: 1.4rem;
+    width: 2.9rem;
+    height: 0.1rem;
+    background-color: #c1ccd8;
+}
+.progress-num {
+    position: absolute;
+    top: 0.9rem;
+    left: 1.4rem;
+}
+.progress {
+    height: 0.1rem;    
+    background-color: #1a95a9
+}
+.muted.iconfont {
+    position: absolute;
+    top: 0.94rem;
+    left: 2.4rem;
+}
+.volume-range {
+    width: 1.3rem;
+    height: 0.1rem;
+    background-color: #c1ccd8;
+    position: absolute;
+    top: 0.97rem;
+    left: 2.65rem;
+}
+.volume {
+    height: 0.1rem;
+    background-color: #1a95a9
+}
+.toggle-list.iconfont {
+    position: absolute;
+    top: 0.93rem;
+    left: 4.1rem;
+}
