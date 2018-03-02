@@ -1,34 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cmn">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_578658_iddo7ile8h2p4x6r.css">
     <title>HDSPlayer</title>
 </head>
 
 <body>
+    <div class="header">
+        <h1>HDSPlayer</h1>
+        <p>--简单易用的开源音乐播放器</p>
+    </div>
+
     <div id="id-player">
-        <audio id="id-music" src="https://m8.music.126.net/20180301000507/ed522172d9671b77326732698a59d905/ymusic/8972/6e6e/7b86/bddf788bf92e62d7c5c9aa457dd27bf5.mp3" preload="auto" controls>
-            <p>你的浏览器不支持audio标签</p>
-        </audio>
-        <div class="id-show">
-            <img src="" alt="图片">
-            <p class="song-name">歌名</p>
-            <p class="singer">歌手</p>
+        <div id="id-player-main">
+            <audio id="id-music" src="" preload="auto">
+                <p>你的浏览器不支持audio标签</p>
+            </audio>
+            <div id="id-show">
+                <div id="id-player-img">
+                    <img src="" alt="图片">
+                    <span class="iconSpan">
+                        <i class="play iconfont icon-play2"></i>
+                    </span>   
+                    <!-- <i class="pause iconfont icon-pause"></i> -->
+                </div>
+
+                <p class="song-name">歌名</p>
+                <p class="artists">歌手</p>
+            </div>
+            <div id="id-control">
+                <div class="progress-range">
+                    <div class="progress"></div>
+                </div>
+                <span class="progress-num">00:00/00:00</span>
+                <i class="muted iconfont icon-shengyin"></i>
+                <div class="volume-range">
+                    <div class="volume"></div>
+                </div>
+                <i class="toggle-list iconfont icon-iconlist"></i>
+            </div>
+            
         </div>
-        <div id="id-control">
-            歌曲进度:
-            <input class="progress" type="range">
-            <br> 音量:
-            <input class="volume" type="range" min="0" max="100" value="30">
-            <br>
-            <button class="play">播放</button>
-            <button class="volume">暂停</button>
+
+        <div id="id-view">
+            <div id="id-search">
+                <select class="searchType">
+                    <option value="1">歌曲</option>
+                    <option value="100">歌手</option>
+                    <option value="1000">歌单</option>
+                </select>
+                <input class="searchIpu" type="text">
+                <button class="searchBut">搜索</button>
+            </div>
+            <div class="artistsIntroduce">
+
+            </div>
+            <ul class="view">
+
+            </ul>
         </div>
     </div>
 </body>
+<script src="api.js"></script>
+<script src="app.js"></script>
 
 </html>
