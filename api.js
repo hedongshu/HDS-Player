@@ -32,6 +32,7 @@ var renderPlayer = function (player) {
     $('#id-show img').attr('src', player.picUrl)
     $('.song-name').text(player.songName)
     $('.artists').text(player.artists)
+    music.play()
 }
 
 // 把歌曲信息对象传给播放器对象
@@ -41,13 +42,11 @@ var songDataToPlayer = function (songData) {
     player.picUrl = songData.detail.songs[0].al.picUrl
     player.songName = songData.detail.songs[0].name
     player.artists = songData.detail.songs[0].ar[0].name
-    console.log(player)
     renderPlayer(player)
 }
 // 获取搜索结果data
 var getSearchData = function (type, data) {
     var url = `https://api.imjad.cn/cloudmusic/?type=search&search_type=${type}&s=${data}`
-    console.log(url)
     var data
     $.ajax({
         url: url,
@@ -166,7 +165,6 @@ var playlistDetails = function (id) {
         <img src=${coverImgUrl} alt="图片">
         <p>${description}</p>`)
         var list = data.playlist.tracks
-        console.log(list)
         for (let i = 0; i < list.length; i++) {
             var id = list[i].id
             var name = list[i].name

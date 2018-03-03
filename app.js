@@ -127,7 +127,6 @@ var clickToggleList = function () {
 var loadSong = function (target) {
     if (target.hasClass('songName')) {
         var id = target[0].id
-        console.log(id)
         var songData = getSongData(id)
         songDataToPlayer(songData)
     } else if (target.hasClass('artistsName')) {
@@ -169,10 +168,8 @@ var clickView = function (event) {
     }
     // 播放全部按钮
     else if ($(this).hasClass('playAll')) {
-        console.log('click playall')
         clickPlayAll()
     }
-    console.log($(this).hasClass('playAll'))
 }
 
 // 点击切换单曲循环
@@ -187,7 +184,6 @@ var musicEnd = function () {
     var loopBut = $('.loop-but.iconfont')
     if (loopBut.hasClass('icon-liebiaoxunhuan')) {
         console.log('列表循环')
-        console.log(musicIdList.length)
         getNextIdFromList()
     } else {
         console.log('单曲循环')
@@ -211,15 +207,10 @@ var clickPlayAll =function () {
 var getNextIdFromList = function () {
     var nowId = player.songId
     var i = musicIdList.indexOf(nowId)
-    console.log('nowid:'+nowId)
-    console.log('i:'+i)
-    
     if (i == -1) {
-        console.log('solo')
         var id = musicIdList[0]
         playSong(id)
     } else {
-        console.log('next')
         var id = musicIdList[i+1]
         playSong(id)
     }
@@ -254,12 +245,17 @@ var bindEvent = function () {
     $('#id-music').on('playing',playerOnplaying)
     // 播放全部按钮
     $('.playAllDiv').on('click', 'button', clickPlayAll)
+
+
+    // 手机端第一次触摸播放音乐
+    $('html').one('touchstart',function(){
+        audio.play();
+    });
 }
 // 显示播放全部按钮
 var showPlayAll = function () {
     var html = '<button class="playAll">播放全部</button>'
     $('.playAllDiv').append(html)
-    console.log('1')
 } 
 
 var playSong = function (id) {
