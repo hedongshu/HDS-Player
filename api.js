@@ -36,9 +36,10 @@ var renderPlayer = function (player) {
 
 // 把歌曲信息对象传给播放器对象
 var songDataToPlayer = function (songData) {
+    player.songId = `${songData.song.data[0].id}`
     player.songUrl = songData.song.data[0].url
     player.picUrl = songData.detail.songs[0].al.picUrl
-    player.songName = songData.detail.songs[0].al.name
+    player.songName = songData.detail.songs[0].name
     player.artists = songData.detail.songs[0].ar[0].name
     console.log(player)
     renderPlayer(player)
@@ -63,6 +64,7 @@ var getSearchData = function (type, data) {
 
 // 渲染歌曲列表
 var renderSongView = function (data) {
+    $('.artistsIntroduce').html('')
     $('.view').html('')
     var list = data.result.songs
     for (let i = 0; i < list.length; i++) {
@@ -73,14 +75,16 @@ var renderSongView = function (data) {
         var html = `
         <li class='type-songs' >
             <a class="songName" id=${songId} href="javascript:;">${songName}</a>
-            <a class="artistsName" id=${artistsId} href="javascript:;">${artistsName}</a>
+            <a class="artistsName" id=${artistsId} href="javascript:;">-- ${artistsName}</a>
         </li>`
         $('.view').append(html)
     }
+    showPlayAll()
 }
 
 // 渲染歌手详情
 var renderArtistsView = function (data) {
+    $('.artistsIntroduce').html('')
     $('.view').html('')
     var list = data.result.artists
     for (let i = 0; i < list.length; i++) {
@@ -98,18 +102,18 @@ var renderArtistsView = function (data) {
 
 // 渲染歌单列表
 var renderSonglistView = function (data) {
+    $('.artistsIntroduce').html('')
     $('.view').html('')
     var list = data.result.playlists
     for (let i = 0; i < list.length; i++) {
         var listName = list[i].name
         var listId = list[i].id
         var playCount = list[i].playCount
-        var bookCount = list[i].bookCount
+        var trackCount = list[i].trackCount
         var html = `
         <li class='type-playlists'>
             <a class="listName" id=${listId} href="javascript:;">${listName}</a>
-            <span>播放次数: ${playCount}</span>
-            <span>歌曲数量: ${bookCount}</span>
+            <span>播放次数: ${playCount} 歌曲数量: ${trackCount}</span>
         </li>`
         $('.view').append(html)
     }
@@ -117,6 +121,7 @@ var renderSonglistView = function (data) {
 
 // 渲染歌手详情页
 var artistsIntroduce = function (id) {
+    $('.artistsIntroduce').html('')
     $('.view').html('')
     var data = getData('artist', id)
     if (data.code == 200) {
@@ -148,6 +153,7 @@ var renderSongs = function (arr) {
         </li>`
         $('.view').append(html)
     }
+    showPlayAll()
 }
 
 // 渲染歌单详情
@@ -164,12 +170,16 @@ var playlistDetails = function (id) {
         for (let i = 0; i < list.length; i++) {
             var id = list[i].id
             var name = list[i].name
+            var artistsId = list[i].ar[0].id
+            var artistsName = list[i].ar[0].name
             var html = `
             <li class='type-songs' >
                 <a class="songName" id=${id} href="javascript:;">${name}</a>
+                <a class="artistsName" id=${artistsId} href="javascript:;">-- ${artistsName}</a>
             </li>`
         $('.view').append(html)
     }
+    showPlayAll()
 }
 
 

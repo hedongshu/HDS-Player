@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
     <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_578658_iddo7ile8h2p4x6r.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_578658_ydjjxw3orauu9pb9.css">
     <title>HDSPlayer</title>
 </head>
 
@@ -19,22 +19,24 @@
 
     <div id="id-player">
         <div id="id-player-main">
-            <audio id="id-music" src="" preload="auto">
+            <audio id="id-music" src="" preload="auto" autoplay>
                 <p>你的浏览器不支持audio标签</p>
             </audio>
             <div id="id-show">
                 <div id="id-player-img">
                     <img src="" alt="图片">
                     <span class="iconSpan">
-                        <i class="play iconfont icon-play2"></i>
+                        <i class="play iconfont icon-pause2"></i>
                     </span>   
-                    <!-- <i class="pause iconfont icon-pause"></i> -->
+                    <!-- <i class="pause iconfont icon-pause2"></i> -->
                 </div>
 
                 <p class="song-name">歌名</p>
                 <p class="artists">歌手</p>
             </div>
             <div id="id-control">
+                <i class="loop-but iconfont icon-liebiaoxunhuan"></i>
+                <!-- <i class="iconfont icon-danquxunhuan"></i> -->
                 <div class="progress-range">
                     <div class="progress"></div>
                 </div>
@@ -55,11 +57,12 @@
                     <option value="100">歌手</option>
                     <option value="1000">歌单</option>
                 </select>
-                <input class="searchIpu" type="text">
-                <button class="searchBut">搜索</button>
+                <input class="searchIpu" type="text" placeholder="请先选择左边的类型哦~">
             </div>
             <div class="artistsIntroduce">
-
+            </div>
+            <div class="playAllDiv">
+                <!-- <button class="playAll">播放全部</button> -->
             </div>
             <ul class="view">
 
