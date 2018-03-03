@@ -12,61 +12,63 @@
 </head>
 
 <body>
-    <div class="header">
-        <h1>HDSPlayer</h1>
-        <p>--简单易用的开源音乐播放器</p>
-    </div>
-
-    <div id="id-player">
-        <div id="id-player-main">
-            <audio id="id-music" src="" preload="auto" autoplay>
-                <p>你的浏览器不支持audio标签</p>
-            </audio>
-            <div id="id-show">
-                <div id="id-player-img">
-                    <img src="" alt="图片">
-                    <span class="iconSpan">
-                        <i class="play iconfont icon-pause2"></i>
-                    </span>   
-                    <!-- <i class="pause iconfont icon-pause2"></i> -->
-                </div>
-
-                <p class="song-name">歌名</p>
-                <p class="artists">歌手</p>
-            </div>
-            <div id="id-control">
-                <i class="loop-but iconfont icon-liebiaoxunhuan"></i>
-                <!-- <i class="iconfont icon-danquxunhuan"></i> -->
-                <div class="progress-range">
-                    <div class="progress"></div>
-                </div>
-                <span class="progress-num">00:00/00:00</span>
-                <i class="muted iconfont icon-shengyin"></i>
-                <div class="volume-range">
-                    <div class="volume"></div>
-                </div>
-                <i class="toggle-list iconfont icon-iconlist"></i>
-            </div>
-            
+    <div id="main">
+        <div class="header">
+            <h1>HDSPlayer</h1>
+            <p>--简单易用的开源音乐播放器</p>
         </div>
 
-        <div id="id-view">
-            <div id="id-search">
-                <select class="searchType">
-                    <option value="1">歌曲</option>
-                    <option value="100">歌手</option>
-                    <option value="1000">歌单</option>
-                </select>
-                <input class="searchIpu" type="text" placeholder="请先选择左边的类型哦~">
-            </div>
-            <div class="artistsIntroduce">
-            </div>
-            <div class="playAllDiv">
-                <!-- <button class="playAll">播放全部</button> -->
-            </div>
-            <ul class="view">
+        <div id="id-player">
+            <div id="id-player-main">
+                <audio id="id-music" src="" preload="auto" autoplay>
+                    <p>你的浏览器不支持audio标签</p>
+                </audio>
+                <div id="id-show">
+                    <div id="id-player-img">
+                        <img src="" alt="图片">
+                        <span class="iconSpan">
+                            <i class="play iconfont icon-pause2"></i>
+                        </span>
+                        <!-- <i class="pause iconfont icon-pause2"></i> -->
+                    </div>
 
-            </ul>
+                    <p class="song-name">歌名</p>
+                    <p class="artists">歌手</p>
+                </div>
+                <div id="id-control">
+                    <i class="loop-but iconfont icon-liebiaoxunhuan"></i>
+                    <!-- <i class="iconfont icon-danquxunhuan"></i> -->
+                    <div class="progress-range">
+                        <div class="progress"></div>
+                    </div>
+                    <span class="progress-num">00:00/00:00</span>
+                    <i class="muted iconfont icon-shengyin"></i>
+                    <div class="volume-range">
+                        <div class="volume"></div>
+                    </div>
+                    <i class="toggle-list iconfont icon-iconlist"></i>
+                </div>
+
+            </div>
+
+            <div id="id-view">
+                <div id="id-search">
+                    <select class="searchType">
+                        <option value="1">歌曲</option>
+                        <option value="100">歌手</option>
+                        <option value="1000">歌单</option>
+                    </select>
+                    <input class="searchIpu" type="text" placeholder="请先选择左边的类型哦~">
+                </div>
+                <div class="artistsIntroduce">
+                </div>
+                <div class="playAllDiv">
+                    <!-- <button class="playAll">播放全部</button> -->
+                </div>
+                <ul class="view">
+
+                </ul>
+            </div>
         </div>
     </div>
 </body>

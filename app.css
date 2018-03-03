@@ -12,10 +12,15 @@ html {
     font-size: 100px
 }
 body {
-    width: 4.35rem;
     color: #6A6B6F;
     margin: 0 auto;
     font-size: 0.16rem;
+    font-family: '微软雅黑';
+    min-width: 550px;
+}
+#main {
+    width: 4.35rem;
+    margin: 0 auto;
 }
 .header {
     margin: 0.3rem auto;
@@ -214,4 +219,6 @@ body {
 
 
 /* 响应式 手机 */
-@media 
+@media all and (max-width: 300px) {
+    
+}
