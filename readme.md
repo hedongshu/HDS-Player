@@ -13,9 +13,9 @@
 
 ## 界面
 
-![73B5BFE6-E050-476E-864C-9AC17F5A6ACD](/Users/hds/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/1179601966/QQ/Temp.db/73B5BFE6-E050-476E-864C-9AC17F5A6ACD.png)
+![73B5BFE6-E050-476E-864C-9AC17F5A6ACD](https://ws2.sinaimg.cn/large/006tNc79gy1fozyq4i4bqj31020nita4.jpg)
 
-![671CDB37-24E9-40CA-BEBD-0B854F8280E6](/Users/hds/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/1179601966/QQ/Temp.db/671CDB37-24E9-40CA-BEBD-0B854F8280E6.png)
+![671CDB37-24E9-40CA-BEBD-0B854F8280E6](https://ws3.sinaimg.cn/large/006tNc79gy1fozyq3i7utj30z011egpu.jpg)
 
 ## 最后
 
