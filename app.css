@@ -3,6 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* 消除滚动条,但是依然可以滚动 */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
 html {
     font-size: 100px
 }
@@ -65,7 +70,7 @@ body {
     position: absolute;
     top: 0.7rem;
     left: 1.4rem;
-    width: 2.9rem;
+    width: 2.86rem;
     height: 0.1rem;
     background-color: #c1ccd8;
 }
@@ -90,13 +95,123 @@ body {
     position: absolute;
     top: 0.97rem;
     left: 2.65rem;
+    border-radius: 0.03rem;
 }
 .volume {
     height: 0.1rem;
-    background-color: #1a95a9
+    background-color: #1a95a9;
+    border-radius: 0.03rem;
 }
 .toggle-list.iconfont {
     position: absolute;
     top: 0.93rem;
     left: 4.1rem;
 }
+.loop-but.iconfont {
+    position: absolute;
+    top: 0.35rem;
+    right: 0.1rem;
+}
+#id-view {
+    padding-top: 0.3rem;
+    position: relative;
+}
+#id-search {
+    margin: 0 auto;
+    position: absolute;
+    left: 0.42rem;
+}
+.searchIpu {
+    outline: none;
+    width: 3rem;
+    height: 0.3rem;
+    padding: 0.1rem;
+    border-radius: 0.1rem;
+    border: 0.02rem double #FFBA23;
+}
+.searchType {
+    outline: none;
+    width: 0.4rem;
+    height: 0.3rem;
+    border-radius: 0.1rem;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    text-indent: 0.07rem;
+    border: 0.02rem double #FFBA23;
+}
+.playAll {
+    position: absolute;
+    right: 0.2rem;
+    top: 0.7rem;
+    border: 0.02rem solid #FFBA23;
+    border-radius: 0.1rem;
+    padding: 0.01rem 0.06rem;
+    outline: none;
+}
+#id-view a {
+    text-decoration: none;
+    color: #6A6B6F;
+}
+#id-view ul {
+    list-style-type: none;
+    margin: 0.4rem auto;
+    max-height: 3.3rem;
+    overflow: auto;
+    padding: 0 0.1rem;
+}
+#id-view li {
+    margin: 0.05rem;
+    border-bottom: 0.02rem solid #1b95a9;
+}
+#id-view li.type-songs a.artistsName {
+    text-align: right;
+}
+
+#id-view li.type-artists {
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+}
+#id-view li.type-artists img {
+    width: 50%;
+}
+#id-view li.type-artists a {
+    display: block;
+}
+
+#id-view li.type-playlists  {
+    margin-bottom: 0.15rem;
+    border-bottom: 0.02rem solid #1b95a9;
+}
+#id-view li.type-playlists a {
+
+}
+#id-view li.type-playlists span {
+    display: block;
+    font-size: 0.12rem;
+}
+
+.artistsIntroduce {
+    margin: 0.4rem auto;
+    padding: 0 0.1rem;
+}
+.artistsIntroduce img {
+    width: 60%;
+    border-radius: 0.1rem;
+    box-shadow: 6px 4px 20px 5px;
+}
+.artistsIntroduce p {
+    
+}
+.artistsIntroduce .hotSongs {
+    margin: 0.2rem;
+    width: 50%;
+    height: 0.3rem;
+    background-color: #1b95a9;
+    color: white;
+}
+
+
+/* 响应式 手机 */
+@media 
